@@ -1,0 +1,85 @@
+c:\Users\kb\Documents\Github\Credit-Score-Anaylsis-Project\models.py:13: DtypeWarning: Columns (26) have mixed types. Specify dtype option on import or set low_memory=False.
+  train = pd.read_csv('train.csv')
+OccupationOneHotEncoder
+
+=== RandomForest ===
+
+Training RandomForest with default parameters...
+Default Validation Accuracy: 0.6904377816098348
+Default Test Accuracy: 0.7080567486658857
+
+Performing grid search for RandomForest...
+Grid Search Completed in 93.54 seconds
+Best Parameters: {'n_estimators': 100, 'min_samples_split': 5, 'min_samples_leaf': 4, 'max_features': 'sqrt', 'max_depth': 15, 'bootstrap': True}
+Best Cross-Validation Score: 0.7050564119557275
+Best Model Validation Accuracy: 0.6933859932135507
+Best Model Test Accuracy: 0.7048028114017961
+
+=== DecisionTree ===
+
+Training DecisionTree with default parameters...
+Default Validation Accuracy: 0.5816320854425099
+Default Test Accuracy: 0.6104386307431993
+
+Performing grid search for DecisionTree...
+Grid Search Completed in 3.51 seconds
+Best Parameters: {'min_samples_split': 10, 'min_samples_leaf': 4, 'max_depth': 10}
+Best Cross-Validation Score: 0.6845916194081323
+Best Model Validation Accuracy: 0.6660733159036547
+Best Model Test Accuracy: 0.6842379278927502
+
+=== ExtraTrees ===
+
+Training ExtraTrees with default parameters...
+Default Validation Accuracy: 0.6700228069199533
+Default Test Accuracy: 0.6874918651568398
+
+Performing grid search for ExtraTrees...
+Grid Search Completed in 59.89 seconds
+Best Parameters: {'n_estimators': 200, 'max_features': 'sqrt', 'max_depth': 15}
+Best Cross-Validation Score: 0.6826614281911813
+Best Model Validation Accuracy: 0.6711353396006008
+Best Model Test Accuracy: 0.6916569048548744
+
+=== GradientBoosting ===
+
+Training GradientBoosting with default parameters...
+Default Validation Accuracy: 0.6947210324303277
+Default Test Accuracy: 0.7064948587791228
+
+Performing grid search for GradientBoosting...
+Grid Search Completed in 744.34 seconds
+Best Parameters: {'n_estimators': 50, 'max_depth': 5, 'learning_rate': 0.1}
+Best Cross-Validation Score: 0.7092327237650252
+Best Model Validation Accuracy: 0.6940535128219392
+Best Model Test Accuracy: 0.709228166080958
+
+=== AdaBoost ===
+
+Training AdaBoost with default parameters...
+Default Validation Accuracy: 0.6217945152138844
+Default Test Accuracy: 0.6272289470259014
+
+Performing grid search for AdaBoost...
+C:\Users\kb\anaconda3\envs\test-env\lib\site-packages\sklearn\model_selection\_search.py:320: UserWarning: The total space of parameters 9 is smaller than n_iter=10. Running 9 iterations. For exhaustive searches, use GridSearchCV.
+  warnings.warn(
+Grid Search Completed in 71.45 seconds
+Best Parameters: {'n_estimators': 150, 'learning_rate': 1.0}
+Best Cross-Validation Score: 0.6476548458389719
+Best Model Validation Accuracy: 0.6397619180063414
+Best Model Test Accuracy: 0.6501366653650917
+
+=== MLP ===
+
+Training MLP with default parameters...
+Default Validation Accuracy: 0.6475496467708739
+Default Test Accuracy: 0.667187296628921
+
+Performing grid search for MLP...
+C:\Users\kb\anaconda3\envs\test-env\lib\site-packages\sklearn\model_selection\_search.py:412: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray.
+  arr = np.array(param_list)
+Grid Search Completed in 314.11 seconds
+Best Parameters: {'max_iter': 1000, 'learning_rate_init': 0.0001, 'hidden_layer_sizes': (100, 50), 'activation': 'relu'}
+Best Cross-Validation Score: 0.6730778943282977
+Best Model Validation Accuracy: 0.649941592034266
+Best Model Test Accuracy: 0.6664063516855395
