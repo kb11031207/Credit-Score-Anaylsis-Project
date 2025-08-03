@@ -1,3 +1,16 @@
+"""
+************************************************
+* dataprocessing.py
+* Kesiena Berezi
+* Credit Score Analysis Project
+* Description: Data preprocessing pipeline for credit score prediction.
+*              Implements custom transformers for cleaning and transforming
+*              financial data including numeric cleaning, credit history
+*              transformation, payment behavior analysis, and outlier detection.
+* Usage: python dataprocessing.py
+************************************************
+"""
+
 import time
 from sklearn.base import BaseEstimator, TransformerMixin
 from sklearn.linear_model import LogisticRegression

@@ -1,3 +1,16 @@
+"""
+************************************************
+* DecisionTrees.py
+* Kesiena Berezi
+* Credit Score Analysis Project
+* Description: Decision tree-based models for credit score prediction
+*              including Random Forest, Decision Trees, Extra Trees,
+*              and Gradient Boosting with optimized hyperparameters
+*              and comprehensive model evaluation.
+* Usage: python DecisionTrees.py
+************************************************
+"""
+
 import time
 from sklearn.ensemble import RandomForestClassifier, ExtraTreesClassifier, GradientBoostingClassifier, AdaBoostClassifier
 from sklearn.model_selection import GroupShuffleSplit
@@ -8,9 +21,9 @@ import pandas as pd
 
 # Assuming train and test datasets are already loaded
 # Replace these with your dataset variables
-train_X, train_y = None, None  # Replace with your training features and target
-val_X, val_y = None, None  # Replace with your validation features and target
-test_X, test_y = None, None  # Replace with your test features and target
+train_X, train_y = None, None  
+val_X, val_y = None, None  
+test_X, test_y = None, None 
 
 cleanedData = pd.read_csv('train_transformed.csv')
 X = cleanedData.drop('Credit_Score', axis=1)

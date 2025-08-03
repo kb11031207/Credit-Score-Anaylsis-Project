@@ -1,3 +1,16 @@
+"""
+************************************************
+* NN_MODEL.py
+* Kesiena Berezi
+* Credit Score Analysis Project
+* Description: Deep learning model for credit score prediction using
+*              TensorFlow/Keras with multiple dense layers, dropout,
+*              early stopping, and feature scaling for improved
+*              neural network performance.
+* Usage: python NN_MODEL.py
+************************************************
+"""
+
 from sklearn.model_selection import GroupShuffleSplit
 from sklearn.preprocessing import StandardScaler
 import pandas as pd

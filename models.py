@@ -1,3 +1,16 @@
+"""
+************************************************
+* models.py
+* Kesiena Berezi
+* Credit Score Analysis Project
+* Description: Implements multiple ML models for credit score prediction
+*              including Random Forest, Decision Trees, Extra Trees,
+*              Gradient Boosting, AdaBoost, and Neural Networks with
+*              hyperparameter optimization using RandomizedSearchCV.
+* Usage: python models.py
+************************************************
+"""
+
 import time
 from sklearn.base import BaseEstimator, TransformerMixin
 from sklearn.linear_model import LogisticRegression
