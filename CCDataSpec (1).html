@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/4.0.0/github-markdown.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release/build/styles/default.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markdown-it-texmath/css/texmath.min.css">
+<link rel="stylesheet" href="file:///c:\Users\clint\.vscode\extensions\goessner.mdmath-2.7.4\themes\default\style.css">
+
+</head>
+<body class="markdown-body">
+<h1 dir="auto" id="credit-score-anaylsis-project-1">Credit Score Anaylsis Project</h1>
+<h2 dir="auto" id="overview-1">Overview</h2>
+<p dir="auto">In this project you'll analyze data regarding borrower behavior to estimate credit scores.  You'll use 27 properties of borrowers to predict a credit score of Good, Standard, or Poor.</p>
+<h2 dir="auto" id="the-data-1">The Data</h2>
+<p dir="auto">Files train.csv and test.csv are provided.  Use the former for training and
+validation and the latter only for testing.  Your predictor must not use
+any data in test.csv for training or validation.</p>
+<h2 dir="auto" id="expected-data-cleaning-1">Expected Data Cleaning</h2>
+<p dir="auto">In addition to any other data cleaning, you're expected to do the following:</p>
+<h3 dir="auto" id="wild-outliers-and-multiple-records-per-person-1">Wild Outliers and Multiple Records Per Person</h3>
+<p dir="auto">There are clearly some wild outliers in several columns, almost certainly due to entry errors.  However, fortunately, there are also multiple records per person,
+so in many cases we can fix the missing value by getting the correct value from other records for the same person.</p>
+<p dir="auto">Correct outliers <em>where feasible</em> with a transformer that uses this fact.<br>
+The transformer must be constructed with a hi/lo valid range outside of which it
+will assume a datum is invalid, and must substitute the mode of the valid data
+for the person in question.  Use this same transformer to fix missing data e.g.
+in Occupation.  Do not use it for data that varies widely even for the same person from record to record.</p>
+<h3 dir="auto" id="loan-type-1">Loan Type</h3>
+<p dir="auto">Write a transformer that expands this to a multicategory binary value, with a 1 for each loan type that applies.</p>
+<h3 dir="auto" id="payment-behavior-1">Payment Behavior</h3>
+<p dir="auto">Write a transformer that translates this string-value into two numerical values, one for charge sizes and the other for payment sizes.</p>
+<h3 dir="auto" id="rework-credit_history_age-1">Rework Credit_History_Age</h3>
+<p dir="auto">This verbal description clearly needs to be converted to an integer number of months.  Write a transformer to do so.</p>
+<h3 dir="auto" id="make-columns-uniform-in-scale-1">Make Columns Uniform in Scale</h3>
+<p dir="auto">This is optional for any decision tree algorithm, but required for MLP prediction.</p>
+<h3 dir="auto" id="do-any-other-needed-adjustments-1">Do Any Other Needed Adjustments</h3>
+<p dir="auto">The list above covers most of the ground, but there will be some other data cleaning needed.  Use your judgment on this.</p>
+<h3 dir="auto" id="one-big-pipeline-1">One big pipeline</h3>
+<p dir="auto">In the spirit of the text example e.g. on p. 87, assemble all your data adjustments into a pipeline</p>
+<h2 dir="auto" id="target-test-scores-1">Target Test Scores</h2>
+<p dir="auto">Once your data is cleaned, try at least two methods for training an estimator, using Scikit-learn tools.  One must be a decision tree of some sort, with ensemble improvements.  The other may be an MLP or other method of your choice.</p>
+<p dir="auto">You must achieve at least 93% accuracy with test.csv after training.  Training may take at most 10 minutes, since you'll be asked to run it during demo.  Further improvements past this will result in progressively higher grades.</p>
+<h2 dir="auto" id="submitting-1">Submitting</h2>
+<p dir="auto">Demonstrate your code to me, and be ready to discuss how you cleaned the data and what ID methods you used.  Once it passes style and demos sufficiently accurate test performance, you can submit it.</p>
+
+</body>
+</html>
